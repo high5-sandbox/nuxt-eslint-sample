@@ -12,5 +12,9 @@
   "dependencies": {
     "nuxt": "^3.13.0",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.5.2",
+    "eslint": "^8.57.0"
   }
 }
