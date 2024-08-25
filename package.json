@@ -16,6 +16,7 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.2"
+    "@nuxt/eslint": "^0.5.2",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1"
   }
 }
