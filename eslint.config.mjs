@@ -1,6 +1,14 @@
+import stylistic from '@stylistic/eslint-plugin'
 import withNuxt from './.nuxt/eslint.config.mjs'
+import { FlatCompat } from '@eslint/eslintrc'
+
+const compat = new FlatCompat()
 
 export default withNuxt(
+  {
+    ignores: ['**/fixtures/**', '**/dist/**'],
+  },
+  ...compat.extends('plugin:vuejs-accessibility/recommended'),
   {
     files: ['**/*.vue'],
     rules: {
@@ -14,4 +22,9 @@ export default withNuxt(
       '@typescript-eslint/no-explicit-any': 'error',
     },
   },
+  stylistic.configs.customize({
+    indent: 2,
+    quotes: 'single', // クオートはシングル
+    semi: false, // セミコロンは不要,
+  }),
 )
