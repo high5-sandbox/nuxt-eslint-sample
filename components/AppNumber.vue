@@ -1,13 +1,18 @@
 <script lang="ts" setup>
 
-import AppNumber from '~/components/AppNumber.vue'
+const num = useState('random', () => Math.random())
+
+const refreshNum = () => {
+  num.value = Math.random()
+}
 
 </script>
 
 <template>
   <div>
     <div>
-     <AppNumber/>
+      <p>Number: {{ num }}</p>
+      <button @click="refreshNum">クリック</button>
     </div>
   </div>
 </template>
